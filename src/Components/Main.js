@@ -1,8 +1,14 @@
 import React from 'react'
+import {Route, Routes} from 'react-router-dom'
+import Services from '../Pages/Services'
 
-const Main = () => {
+const Main = (props) => {
   return (
-    <div>Main</div>
+    <main>
+        <Routes>
+            <Route path='/services' element= {<Services/>}/>
+        </Routes>
+    </main>
   )
 }
 
