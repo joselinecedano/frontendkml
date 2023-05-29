@@ -2,9 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import ServicesIdx from "./ServicesIdx";
-import ServiceCrt from "./ServiceCrt";
-import ServiceShow from "./ServiceShow";
+import ServicesIdx from "./indexS";
+import ServiceCrt from "./createS";
+import ServiceShow from "./showS";
 
 const Services = (props) => {
   const [services, setServices] = useState(null);
@@ -44,7 +44,7 @@ const Services = (props) => {
           element={
             <ServiceCrt services={services} createService = {createService} />}/>
 
-        <Route path="/:id" element={<ServiceShow service={services} />} />
+        <Route path="/:id" element={<ServiceShow services={services} />} />
       </Routes>
     </section>
   );
