@@ -44,6 +44,13 @@ const Services = (props) => {
     getServices()
   }
 
+  const deleteService = async (id) => {
+    await fetch(servicesUrl + id, {
+      method: "DELETE",
+    })
+    //update list of services
+    getServices()
+  }
 
   useEffect(() => {
     getServices();
@@ -63,7 +70,8 @@ const Services = (props) => {
 
       <Route path="/edit/:id"
           element={
-            <ServiceEdit services={services} updateService = {updateService} />}/>
+            <ServiceEdit services={services} updateService = {updateService}
+            deleteService = {deleteService} />}/>
       </Routes>
     </section>
   );

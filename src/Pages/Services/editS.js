@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate , useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const ServiceEdit = (props) => {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ export const ServiceEdit = (props) => {
   const id = params.id;
   const services = props.services;
   const service = services.find((s) => s._id === id);
-  
+
   //state for edit form
   const [editForm, setEditForm] = useState(service);
 
@@ -24,10 +24,17 @@ export const ServiceEdit = (props) => {
     //redirect back to service show
     navigate(`/services/${service._id}`);
   };
-  return(
+
+  const deleteService = (e) => {
+    e.preventDefault();
+    props.deleteService(service._id);
+    navigate("/services");
+  };
+
+  return (
     <div className="edit">
-        <h2> Edit {service.name}</h2>
-        <form onSubmit={handleSubmit}>
+      <h2> Edit {service.name}</h2>
+      <form onSubmit={handleSubmit}>
         <label> Name: </label>
         <input
           type="text"
@@ -36,7 +43,8 @@ export const ServiceEdit = (props) => {
           placeholder="Service Name"
           onChange={handleChange}
           required
-        /><br/>
+        />
+        <br />
         <label> Image URL: </label>
         <input
           type="text"
@@ -44,7 +52,8 @@ export const ServiceEdit = (props) => {
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
-        /><br/>
+        />
+        <br />
         <label> Description: </label>
         <input
           type="text"
@@ -52,7 +61,8 @@ export const ServiceEdit = (props) => {
           name="description"
           placeholder="Service Description"
           onChange={handleChange}
-        /><br/>
+        />
+        <br />
         <label> Price: </label>
         <input
           type="number"
@@ -61,10 +71,12 @@ export const ServiceEdit = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
-        /><br/>
+        />
+        <br />
         <input type="submit" value="Update Service" />
       </form>
+      <button className = 'delete' onClick={deleteService}> Delete </button>
     </div>
-  )
+  );
 };
 export default ServiceEdit;
