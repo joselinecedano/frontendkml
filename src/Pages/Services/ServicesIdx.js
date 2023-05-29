@@ -5,7 +5,9 @@ const ServicesIdx = (props) => {
 
   //loaded function
   const loaded = () => {
-    return props.services.map((service) => (
+    return (
+      <>
+     {props.services.map((service) => (
       <div key={service._id} className="service">
         <Link to={`/services/${service._id}`}>
           <h1 className="service-title"> {service.name}</h1>
@@ -13,7 +15,10 @@ const ServicesIdx = (props) => {
         <img src={service.image} alt={service.name} />
         <h3> {service.description} </h3>
       </div>
-    ));
+    ))}
+   <Link to ='/services/form'>Add a Service</Link>
+      </>
+    );
   };
 
   const loading = () => {
