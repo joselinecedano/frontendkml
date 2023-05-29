@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import ServicesIdx from "./indexS";
 import ServiceCrt from "./createS";
 import ServiceShow from "./showS";
+import ServiceEdit from "./editS";
 
 const Services = (props) => {
   const [services, setServices] = useState(null);
@@ -30,6 +31,20 @@ const Services = (props) => {
     getServices();
   };
 
+  const updateService = async (service, id) => {
+    //make PUT request to update service
+    await fetch(servicesUrl + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(service)
+    })
+    //update list of services
+    getServices()
+  }
+
+
   useEffect(() => {
     getServices();
   }, []);
@@ -44,7 +59,11 @@ const Services = (props) => {
           element={
             <ServiceCrt services={services} createService = {createService} />}/>
 
-        <Route path="/:id" element={<ServiceShow services={services} />} />
+        <Route path="/:id" element={<ServiceShow services={services} />}/>
+
+      <Route path="/edit/:id"
+          element={
+            <ServiceEdit services={services} updateService = {updateService} />}/>
       </Routes>
     </section>
   );
