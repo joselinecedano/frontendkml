@@ -1,10 +1,30 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const TrainingIdx = (props) => {
-  
-  return (
-    <div>TrainingIdx</div>
-  )
-}
 
-export default TrainingIdx
+  //loaded function
+  const loaded = () => {
+    return (
+      <>
+     {props.courses.map((course) => (
+      <div key={course._id} className="course">
+        <Link to={`/courses/${course._id}`}>
+          <h1 className="course-title"> {course.name}</h1>
+        </Link>
+        <img src={course.image} alt={course.name} />
+        <h3> {course.description} </h3>
+      </div>
+    ))}
+   <Link to ='/courses/form'>Add a Course</Link>
+      </>
+    );
+  };
+
+  const loading = () => {
+    return <h1> Loading Training Courses ... </h1>
+  }
+  return (props.courses ? loaded() : loading());
+};
+
+export default TrainingIdx;

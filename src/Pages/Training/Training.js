@@ -22,7 +22,7 @@ const Training = (props) => {
   return (
     <section>
         <Routes>
-            <Route path='/' element={<TrainingIdx />}/>
+            <Route path='/' element={<TrainingIdx courses = {courses}/>}/>
         </Routes>
     </section>
   )
