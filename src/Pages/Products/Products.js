@@ -41,8 +41,9 @@ const Products = (props) => {
 
         <Route path="/form" element = {<ProductsCrt createProduct={createProduct} />}/>
 
-        <Route path="/:id" element = {<ProductShow />} />
+        <Route path="/:id" element = {<ProductShow products = {products}/>} />
       </Routes>
+      
     </section>
   );
 };
