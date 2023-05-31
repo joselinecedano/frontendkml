@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import ProductsIdx from "./indexP";
 import ProductsCrt from "./createP";
+import ProductShow from "./showP";
 
 const Products = (props) => {
   const [products, setProducts] = useState(null);
@@ -39,6 +40,8 @@ const Products = (props) => {
         <Route path="/" element={<ProductsIdx products={products} />} />
 
         <Route path="/form" element = {<ProductsCrt createProduct={createProduct} />}/>
+
+        <Route path="/:id" element = {<ProductShow />} />
       </Routes>
     </section>
   );
