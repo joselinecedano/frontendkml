@@ -22,7 +22,7 @@ const ServicesIdx = (props) => {
   };
 
   const loading = () => {
-    return <h1> Loading Services ...</h1>
+    return <h1> Loading Services ... </h1>
   }
   return (props.services ? loaded() : loading());
 };
