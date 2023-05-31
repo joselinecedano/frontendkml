@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import ProductsIdx from "./indexP";
 import ProductsCrt from "./createP";
 import ProductShow from "./showP";
+import ProductEdit from "./editP";
 
 const Products = (props) => {
   const [products, setProducts] = useState(null);
@@ -30,6 +31,28 @@ const Products = (props) => {
     getProducts()
   }
 
+  const updateProduct = async (product, id) => {
+    //make PUT request 
+    await fetch (productsUrl + id , {
+        method: 'PUT', 
+        headers: {
+            'Content-Type' :' application/json'
+        },
+        body: JSON.stringify(product)
+    })
+    //update list of products
+    getProducts()
+  }
+
+  const deleteProduct = async (id) => {
+    //make DELETE request 
+    await fetch( productsUrl + id, {
+        method: "DELETE",
+    })
+    //update list of products
+    getProducts()
+  }
+
   useEffect(() => {
     getProducts();
   }, []);
@@ -42,8 +65,12 @@ const Products = (props) => {
         <Route path="/form" element = {<ProductsCrt createProduct={createProduct} />}/>
 
         <Route path="/:id" element = {<ProductShow products = {products}/>} />
+
+        <Route path="/edit/:id"
+          element={
+            <ProductEdit products={products} updateProduct = {updateProduct}
+            deleteProduct = {deleteProduct} />}/>
       </Routes>
-      
     </section>
   );
 };
