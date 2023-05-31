@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import ProductsIdx from "./indexP";
+import ProductsCrt from "./createP";
 
 const Products = (props) => {
   const [products, setProducts] = useState(null);
@@ -13,8 +14,20 @@ const Products = (props) => {
     const response = await fetch(productsUrl);
     const data = await response.json();
     setProducts(data.data);
-    console.log(data)
   };
+
+  const createProducts = async (product) => {
+    //make post request to create product
+    await fetch(productsUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(product),
+    })
+    //update list of products
+    getProducts()
+  }
 
   useEffect(() => {
     getProducts();
@@ -24,6 +37,8 @@ const Products = (props) => {
     <section>
       <Routes>
         <Route path="/" element={<ProductsIdx products={products} />} />
+
+        <Route path="/form" element = {<ProductsCrt createProducts={createProducts} />}/>
       </Routes>
     </section>
   );
