@@ -29,6 +29,7 @@ const ServiceCrt = (props) => {
       price: "",
     });
     navigate("/services");
+    console.log('Service added!')
   };
 
   return (

@@ -16,7 +16,7 @@ const Products = (props) => {
     setProducts(data.data);
   };
 
-  const createProducts = async (product) => {
+  const createProduct = async (product) => {
     //make post request to create product
     await fetch(productsUrl, {
         method: 'POST',
@@ -38,7 +38,7 @@ const Products = (props) => {
       <Routes>
         <Route path="/" element={<ProductsIdx products={products} />} />
 
-        <Route path="/form" element = {<ProductsCrt createProducts={createProducts} />}/>
+        <Route path="/form" element = {<ProductsCrt createProduct={createProduct} />}/>
       </Routes>
     </section>
   );
