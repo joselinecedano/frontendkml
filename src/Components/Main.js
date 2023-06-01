@@ -6,6 +6,9 @@ import Products from "../Pages/Products/Products.js";
 import Training from "../Pages/Training/Training.js";
 import Gallery from "../Pages/Gallery/Gallery.js";
 
+import KissMyLashesz from "../Pages/KissMyLashesz.js";
+import AboutUs from "../Pages/AboutUs.js";
+
 const Main = (props) => {
   return (
     <main>
@@ -18,6 +21,11 @@ const Main = (props) => {
         <Route path="/training/*" element= {<Training/>} />
 
         <Route path="/gallery/*" element = {<Gallery/>} />
+
+        <Route path = '/' element = {<KissMyLashesz/>} />
+
+        <Route path="/about" element={<AboutUs/>}/>
+        
       </Routes>
     </main>
   );

@@ -11,8 +11,8 @@ export const Header = () => {
         <Link className='logo' to = '/'> KissMyLashesz </Link>
 
         <Link className='nav-link' to = '/products'><div> Products </div></Link>
+        
         <Link className='nav-link' to = '/gallery'><div> Gallery </div></Link>
-        <Link className='nav-link' to = '/user'><div> Account </div></Link>
     </nav>
   )
 }

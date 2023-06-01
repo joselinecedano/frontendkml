@@ -10,8 +10,8 @@ const GalleryIdx = (props) => {
       <div key={post._id} className="post">
         <Link to={`/gallery/${post._id}`}>
         <img src={post.image} alt={post.name} /> </Link>
-         <h2 className="post-title"> {post.name}</h2>
-        <h3> {post.description} </h3>
+         {/* <h2 className="post-title"> {post.name}</h2>
+        <h3> {post.description} </h3> */}
       </div>
     ))}
    <Link to ='/gallery/form'>Add a Post</Link>
