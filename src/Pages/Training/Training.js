@@ -27,6 +27,7 @@ const Training = (props) => {
             },
             body: JSON.stringify(course)
         })
+        //update list of courses 
         getCourses()
     }
 
@@ -39,9 +40,18 @@ const Training = (props) => {
             },
             body: JSON.stringify(course)
         })
+        //update list of courses
         getCourses()
     }
 
+        const deleteCourse = async (id) => {
+            //make DELETE request to delete a course
+          await fetch (trainingUrl + id, {
+            method: 'DELETE'
+          })  
+          //update list of courses
+          getCourses()
+        }
 
     useEffect(()=>{
         getCourses()
@@ -56,7 +66,7 @@ const Training = (props) => {
 
             <Route path='/:id' element={<TrainingShow courses={courses}/>}/>
 
-            <Route path='/edit/:id' element = {<TrainingEdit courses = {courses} updateCourse = {updateCourse}/>} />
+            <Route path='/edit/:id' element = {<TrainingEdit courses = {courses} updateCourse = {updateCourse} deleteCourse = {deleteCourse}/>} />
 
         </Routes>
     </section>

@@ -25,7 +25,12 @@ export const TrainingEdit = (props) => {
     navigate(`/training/${course._id}`);
   };
 
- 
+  const deleteCourse = (e) => {
+    e.preventDefault();
+    props.deleteCourse(course._id);
+    navigate("/training");
+  };
+
 
   return (
     <div className="edit">
@@ -71,7 +76,7 @@ export const TrainingEdit = (props) => {
         <br />
         <input type="submit" value="Update Course" />
       </form>
-     
+      <button className = 'delete' onClick={deleteCourse}> Delete </button>
     </div>
   );
 };
