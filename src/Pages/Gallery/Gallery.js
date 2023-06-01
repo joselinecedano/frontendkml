@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import GalleryIdx from './indexG';
 import GalleryCrt from './createG';
+import GalleryShow from './showG';
 
 const Gallery = (props) => {
     const [posts, setPosts] = useState(null)
@@ -28,7 +29,19 @@ const Gallery = (props) => {
         getPosts()
     }
 
-    
+    const updatePost = async (post, id) => {
+        await fetch(galleryUrl + id, {
+            //making a PUT request to gallery
+            method: "PUT",
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(post)
+        })
+        //update list of posts made on gallery
+        getPosts()
+    }
+
     useEffect(()=>{
         getPosts()
     }, [])
@@ -38,6 +51,7 @@ const Gallery = (props) => {
     <Routes>
         <Route path='/' element = {<GalleryIdx posts = {posts} />}/> 
         <Route path='/form' element = {< GalleryCrt createPost = {createPost}/>} />
+        <Route path='/:id' element = {<GalleryShow updatePost = {updatePost} posts = {posts}/>} />
     </Routes>
    </section>
   )
