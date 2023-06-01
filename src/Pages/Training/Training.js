@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import TrainingIdx from './indexT';
 import TrainingCrt from './createT';
+import TrainingShow from './showT';
 
 const Training = (props) => {
     const [courses, setCourse] = useState(null)
@@ -38,6 +39,8 @@ const Training = (props) => {
 
             <Route path='/form' element = {<TrainingCrt  courses = {courses}createCourse={createCourse}/>}/>
 
+            <Route path='/:id' element={<TrainingShow courses={courses}/>}/>
+            
         </Routes>
     </section>
   )
