@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import TrainingIdx from './indexT';
 import TrainingCrt from './createT';
 import TrainingShow from './showT';
+import TrainingEdit from './editT';
 
 const Training = (props) => {
     const [courses, setCourse] = useState(null)
@@ -16,6 +17,7 @@ const Training = (props) => {
         const data = await response.json()
         setCourse(data.data)
     }
+
     const createCourse = async (course) => {
         //make a POST request to create a course
         await fetch (trainingUrl, {
@@ -27,6 +29,19 @@ const Training = (props) => {
         })
         getCourses()
     }
+
+    const updateCourse = async (course, id) => {
+        //make a PUT request to update a course
+        await fetch(trainingUrl + id, {
+            method: 'PUT',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(course)
+        })
+        getCourses()
+    }
+
 
     useEffect(()=>{
         getCourses()
@@ -40,7 +55,9 @@ const Training = (props) => {
             <Route path='/form' element = {<TrainingCrt  courses = {courses}createCourse={createCourse}/>}/>
 
             <Route path='/:id' element={<TrainingShow courses={courses}/>}/>
-            
+
+            <Route path='/edit/:id' element = {<TrainingEdit courses = {courses} updateCourse = {updateCourse}/>} />
+
         </Routes>
     </section>
   )
