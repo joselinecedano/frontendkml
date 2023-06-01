@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import GalleryIdx from './indexG';
 import GalleryCrt from './createG';
 import GalleryShow from './showG';
+import GalleryEdit from './editG';
 
 const Gallery = (props) => {
     const [posts, setPosts] = useState(null)
@@ -42,6 +43,14 @@ const Gallery = (props) => {
         getPosts()
     }
 
+    const deletePost = async (id) => {
+        //make a DELETE request to gallery 
+        await fetch (galleryUrl + id, {
+            method: 'DELETE',
+        })
+        getPosts()
+    }
+
     useEffect(()=>{
         getPosts()
     }, [])
@@ -51,7 +60,8 @@ const Gallery = (props) => {
     <Routes>
         <Route path='/' element = {<GalleryIdx posts = {posts} />}/> 
         <Route path='/form' element = {< GalleryCrt createPost = {createPost}/>} />
-        <Route path='/:id' element = {<GalleryShow updatePost = {updatePost} posts = {posts}/>} />
+        <Route path='/:id' element = {<GalleryShow  posts = {posts}/>} />
+        <Route path='/edit/:id' element = {<GalleryEdit posts = {posts} updatePost = {updatePost} deletePost = {deletePost}/>} />
     </Routes>
    </section>
   )
