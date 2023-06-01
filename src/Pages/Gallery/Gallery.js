@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import GalleryIdx from './indexG';
+import GalleryCrt from './createG';
 
 const Gallery = (props) => {
     const [posts, setPosts] = useState(null)
@@ -15,6 +16,19 @@ const Gallery = (props) => {
         setPosts(data.data)
     }
 
+    const createPost = async (post) => {
+        await fetch (galleryUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(post)
+        })
+        // update list of gallery posts
+        getPosts()
+    }
+
+    
     useEffect(()=>{
         getPosts()
     }, [])
@@ -23,6 +37,7 @@ const Gallery = (props) => {
    <section>
     <Routes>
         <Route path='/' element = {<GalleryIdx posts = {posts} />}/> 
+        <Route path='/form' element = {< GalleryCrt createPost = {createPost}/>} />
     </Routes>
    </section>
   )
