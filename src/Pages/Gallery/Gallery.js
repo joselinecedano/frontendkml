@@ -58,9 +58,12 @@ const Gallery = (props) => {
   return (
    <section>
     <Routes>
-        <Route path='/' element = {<GalleryIdx posts = {posts} />}/> 
+        <Route path='/' element = {<GalleryIdx posts = {posts} />}/>
+        
         <Route path='/form' element = {< GalleryCrt createPost = {createPost}/>} />
+
         <Route path='/:id' element = {<GalleryShow  posts = {posts}/>} />
+
         <Route path='/edit/:id' element = {<GalleryEdit posts = {posts} updatePost = {updatePost} deletePost = {deletePost}/>} />
     </Routes>
    </section>

@@ -10,7 +10,7 @@ import ProductEdit from "./editP";
 const Products = (props) => {
   const [products, setProducts] = useState(null);
 
-  const productsUrl = process.env.REACT_APP_PRODUCTS_URL;
+  const productsUrl = process.env.REACT_APP_PRODUCTS_URL
 
   const getProducts = async () => {
     const response = await fetch(productsUrl);

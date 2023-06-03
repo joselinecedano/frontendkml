@@ -10,7 +10,7 @@ import ServiceEdit from "./editS";
 const Services = (props) => {
   const [services, setServices] = useState(null);
 
-  const servicesUrl = process.env.REACT_APP_SERVICES_URL;
+  const servicesUrl = process.env.REACT_APP_SERVICES_URL
 
   const getServices = async () => {
     const response = await fetch(servicesUrl);
