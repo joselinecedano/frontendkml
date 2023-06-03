@@ -6,7 +6,7 @@ import Products from "../Pages/Products/Products.js";
 import Training from "../Pages/Training/Training.js";
 import Gallery from "../Pages/Gallery/Gallery.js";
 
-import KissMyLashesz from "../Pages/KissMyLashesz.js";
+import KissMyLashesz from "../Pages/Landing.js";
 import AboutUs from "../Pages/AboutUs.js";
 import Admin from "../Pages/Admin.js";
 import Register from "./Register.js";
