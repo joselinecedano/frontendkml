@@ -7,7 +7,7 @@ const ProductsIdx = (props) => {
     return (
       <>
      {props.products.map((product) => (
-      <div key={product._id} className="product">
+      <div key={product._id} >
         <Link to={`/products/${product._id}`}>
           <h1 className="product-title"> {product.name}</h1>
         </Link>

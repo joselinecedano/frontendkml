@@ -7,7 +7,7 @@ const GalleryIdx = (props) => {
     return (
       <>
      {props.posts.map((post) => (
-      <div key={post._id} className="post">
+      <div key={post._id} >
         <Link to={`/gallery/${post._id}`}>
         <img src={post.image} alt={post.name} /> </Link>
          {/* <h2 className="post-title"> {post.name}</h2>

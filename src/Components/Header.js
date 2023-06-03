@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 
 export const Header = () => {
   return (
-    <nav className='nav'>
-        <Link className='nav-link' to = '/about'><div> About </div></Link>
-        
-        <Link className='nav-link' to = '/services'><div> Services </div></Link>
+    <nav >
+        <Link to = '/about'><div> About </div></Link>
 
-        <Link className='nav-link' to = '/training'><div> Training </div></Link>
+        <Link to = '/services'><div> Services </div></Link>
 
-        <Link className='logo' to = '/'> KissMyLashesz </Link>
+        <Link to = '/training'><div> Training </div></Link>
 
-        <Link className='nav-link' to = '/products'><div> Products </div></Link>
+        <Link to = '/'> KissMyLashesz </Link>
 
-        <Link className='nav-link' to = '/gallery'><div> Gallery </div></Link>
+        <Link to = '/products'><div> Products </div></Link>
+
+        <Link to = '/gallery'><div> Gallery </div></Link>
     </nav>
   )
 }

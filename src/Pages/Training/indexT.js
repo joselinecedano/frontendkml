@@ -8,7 +8,7 @@ const TrainingIdx = (props) => {
     return (
       <>
      {props.courses.map((course) => (
-      <div key={course._id} className="course">
+      <div key={course._id} >
         <Link to={`/training/${course._id}`}>
           <h1 className="course-title"> {course.name}</h1>
         </Link>

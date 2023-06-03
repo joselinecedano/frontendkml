@@ -4,7 +4,7 @@ import Main from './Components/Main.js'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-pink-500">
       <Header/>
       <Main/>
       <Footer/>

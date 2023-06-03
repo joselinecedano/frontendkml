@@ -8,7 +8,7 @@ const ServicesIdx = (props) => {
     return (
       <>
      {props.services.map((service) => (
-      <div key={service._id} className="service">
+      <div key={service._id} >
         <Link to={`/services/${service._id}`}>
           <h1 className="service-title"> {service.name}</h1>
         </Link>

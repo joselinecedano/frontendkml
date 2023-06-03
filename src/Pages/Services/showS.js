@@ -20,7 +20,7 @@ const ServiceShow = (props) => {
       <h3> ${service.price}</h3>
       <h4> {service.description}</h4>
       <div>
-        <button className="edit-button" onClick={edit}> Edit</button>
+        <button onClick={edit}> Edit</button>
       </div>
       <Link to="/services"> Back to Service</Link>
     </div>

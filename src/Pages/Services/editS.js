@@ -32,7 +32,7 @@ export const ServiceEdit = (props) => {
   };
 
   return (
-    <div className="edit">
+    <div >
       <h2> Edit {service.name}</h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
@@ -75,7 +75,7 @@ export const ServiceEdit = (props) => {
         <br />
         <input type="submit" value="Update Service" />
       </form>
-      <button className = 'delete' onClick={deleteService}> Delete </button>
+      <button onClick={deleteService}> Delete </button>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const Register = () => {
     <section>
         <div>
             <h2> Register Account </h2>
-            <form className='register'>
+            <form >
                 <label> Email: </label>
                 <input
                 type='email'

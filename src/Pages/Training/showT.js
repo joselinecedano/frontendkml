@@ -20,7 +20,7 @@ const TrainingShow = (props) => {
       <h3> ${course.price}</h3>
       <h4> {course.description}</h4>
       <div>
-        <button className="edit-button" onClick={edit}> Edit</button>
+        <button onClick={edit}> Edit</button>
       </div>
       <Link to="/training"> Back to Training Courses</Link>
     </div>

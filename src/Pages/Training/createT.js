@@ -33,7 +33,7 @@ const TrainingCrt = (props) => {
   };
 
   return (
-    <section className="createCourse">
+    <section >
       <h2> Add a Course </h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>

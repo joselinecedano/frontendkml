@@ -32,7 +32,7 @@ const ProductEdit = (props) => {
   };
 
   return (
-    <div className="edit">
+    <div >
       <h2> Edit {product.name}</h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
@@ -75,7 +75,7 @@ const ProductEdit = (props) => {
         <br />
         <input type="submit" value="Update Product" />
       </form>
-      <button className = 'delete' onClick={deleteProduct}> Delete </button>
+      <button  onClick={deleteProduct}> Delete </button>
     </div>
   );
 };

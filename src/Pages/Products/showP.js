@@ -20,7 +20,7 @@ const ProductShow = (props) => {
       <h3> ${product.price}</h3>
       <h4> {product.description}</h4>
       <div>
-        <button className="edit-button" onClick={edit}> Edit </button>
+        <button onClick={edit}> Edit </button>
       </div>
       <Link to="/products"> Back to products</Link>
     </div>

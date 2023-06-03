@@ -33,7 +33,7 @@ const ServiceCrt = (props) => {
   };
 
   return (
-    <section className="createService">
+    <section >
       <h2> Add a Service </h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>

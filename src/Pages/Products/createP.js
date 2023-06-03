@@ -33,7 +33,7 @@ const ProductsCrt = (props) => {
   };
 
   return (
-    <section className="createProduct">
+    <section >
       <h2> Add a Product </h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>

@@ -32,7 +32,7 @@ const GalleryEdit = (props) => {
   };
 
   return (
-    <div className="edit">
+    <div >
       <h2> Edit {post.name}</h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
@@ -65,7 +65,7 @@ const GalleryEdit = (props) => {
         <br />
         <input type="submit" value="Update Post" />
       </form>
-      <button className = 'delete' onClick={deletePost}> Delete </button>
+      <button  onClick={deletePost}> Delete </button>
     </div>
   );
 };

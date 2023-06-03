@@ -31,7 +31,7 @@ const GalleryCrt = (props) => {
   };
 
   return (
-    <section className="createPost">
+    <section >
       <h2> Add a Post </h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>

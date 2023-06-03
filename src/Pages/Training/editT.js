@@ -33,7 +33,7 @@ export const TrainingEdit = (props) => {
 
 
   return (
-    <div className="edit">
+    <div>
       <h2> Edit {course.name}</h2>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
@@ -76,7 +76,7 @@ export const TrainingEdit = (props) => {
         <br />
         <input type="submit" value="Update Course" />
       </form>
-      <button className = 'delete' onClick={deleteCourse}> Delete </button>
+      <button onClick={deleteCourse}> Delete </button>
     </div>
   );
 };

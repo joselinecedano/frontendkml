@@ -19,7 +19,7 @@ const GalleryShow = (props) => {
       <h2> {post.name}</h2>
       <h3> {post.description}</h3>
       <div>
-        <button className="edit-button" onClick={edit}> Edit </button>
+        <button onClick={edit}> Edit </button>
       </div>
       <Link to="/gallery"> Back to Gallery </Link>
     </div>
