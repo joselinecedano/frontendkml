@@ -9,7 +9,8 @@ import Gallery from "../Pages/Gallery/Gallery.js";
 import KissMyLashesz from "../Pages/KissMyLashesz.js";
 import AboutUs from "../Pages/AboutUs.js";
 import Admin from "../Pages/Admin.js";
-import Register from "./Register.js"; 
+import Register from "./Register.js";
+
 
 const Main = (props) => {
   return (
@@ -28,9 +29,10 @@ const Main = (props) => {
 
         <Route path="/about" element={<AboutUs/>}/>
 
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/*" element={<Admin />} />
 
-        <Route path="/register" element={<Register />}/>
+        <Route path="/register" element={<Register/>}/>
+
       </Routes>
     </main>
   );

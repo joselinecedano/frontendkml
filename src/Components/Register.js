@@ -18,6 +18,7 @@ const Register = () => {
             const user = userCredential.user
             console.log(user)
             navigate('/admin')
+            console.log('user registered', user)
         })
         .catch((error)=>{
             const errorCode = error.code
@@ -54,6 +55,9 @@ const Register = () => {
                 onClick={onSubmit}
                 />
             </form>
+            <h4>
+                Already have an account? <Link to='/admin'>Sign In </Link>
+            </h4>
         </div>
     </section>
   )
