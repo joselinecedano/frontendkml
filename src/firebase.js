@@ -27,8 +27,3 @@ const app = initializeApp(firebaseConfig);
 //Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
 export default app;
-
-
-
-// ** used this site to set up firebase user authentication **
-//https://www.freecodecamp.org/news/use-firebase-authentication-in-a-react-app/

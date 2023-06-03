@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { auth } from '../firebase'
 
-const Login = () => {
+const Login = (props) => {
     const navigate = useNavigate()
     
     //state for email and password so admins can log in
@@ -18,6 +18,18 @@ const Login = () => {
             const user = userCredential.user
             navigate('/')
             console.log('logged in user', user)
+        })
+        .catch((error)=>{
+            const errorCode = error.code
+            const errorMessage = error.message
+            console.log(errorCode, errorMessage)
+        })
+    }
+    const logOut = () =>{
+        signOut(auth).then(()=>{
+            //signed out
+            navigate('/')
+            console.log('user signed out')
         })
         .catch((error)=>{
             const errorCode = error.code
@@ -58,6 +70,9 @@ const Login = () => {
     </form>
     <h4>
         Don't have an account? <Link to='/register'> Register </Link>
+    </h4>
+    <h4>
+       Done with your changes? <button onClick={logOut}> Sign Out </button>
     </h4>
 </div>
   )
