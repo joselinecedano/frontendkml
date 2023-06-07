@@ -8,8 +8,8 @@ module.exports = {
       },
       dropShadow: {
         glow: [
-          "0 0px 20px rgba(255,105, 180, 0.55)",
-          "0 0px 65px rgba(255, 105,180, 0.3)",
+          "0 0px 20px rgba(255,49, 49, 0.95)",
+          "0 0px 65px rgba(255, 49,49, 0.9)",
         ],
     },
   },

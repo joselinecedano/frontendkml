@@ -10,7 +10,7 @@ const KissMyLashesz = () => {
         </div>
       </section>
 
-      <section id='our-story'className="py-16 ">
+      <section className="py-16 ">
         <div className="container m-auto px-4 ">
             <br />
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -57,13 +57,13 @@ const KissMyLashesz = () => {
        
             <img
               className="max-w-full h-auto rounded-lg mb-4 custom-height custom-width"
-              src="/images/IMG_3516.jpg"
+              src="/images/jenny.jpg"
               alt="jenny"
             />
             <br />
             <img
               className="max-w-full h-auto rounded-lg mb-4 custom-height custom-width "
-              src="/images/IMG_3517.jpg"
+              src="/images/cindy.jpg"
               alt="cindy"
             />
           </div>

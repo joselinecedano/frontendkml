@@ -4,3 +4,7 @@ height: 300px;
 .custom-width{
   width: 250px;
 }
+
+.logo{
+  max-height: 90px;
+}
