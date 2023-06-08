@@ -17,8 +17,6 @@ const Header = () => {
           </Link>
            <a className=" ml-4 italic drop-shadow-glow"  href="https://app.acuityscheduling.com/schedule.php?owner=19702883">Book Now</a>
         </div>
-       
-
         <div>
           <img
             id="menu-button"
@@ -37,7 +35,7 @@ const Header = () => {
           <ul className="pt-4 text-end md:flex md:justify-between md:pt-0">
             <li>
               <Link
-                className="md:p-4 py-2 block hover:text-red-200"
+                className="md:p-4 py-2 block hover:text-red-400"
                 to="/services"
                 onClick={toggleMenu}
               >
@@ -46,7 +44,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                className="md:p-4 py-2 block hover:text-red-200"
+                className="md:p-4 py-2 block hover:text-red-400"
                 to="/training"
                 onClick={toggleMenu}
               >
@@ -55,7 +53,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                className="md:p-4 py-2 block hover:text-red-200"
+                className="md:p-4 py-2 block hover:text-red-400"
                 to="/products"
                 onClick={toggleMenu}
               >
@@ -64,7 +62,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                className="md:p-4 py-2 block hover:text-red-200"
+                className="md:p-4 py-2 block hover:text-red-400"
                 to="/gallery"
                 onClick={toggleMenu}
               >
@@ -73,7 +71,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                className="md:p-4 py-2 block hover:text-red-200"
+                className="md:p-4 py-2 block hover:text-red-400"
                 to="/about"
                 onClick={toggleMenu}
               >
