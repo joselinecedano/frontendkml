@@ -4,10 +4,9 @@ const AboutUs = () => {
   return (
     <section className="py-16 ">
         <div className="container m-auto px-4 ">
-            <br />
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <div className="text-lg text-center">
-                <h2 className="text-4xl text-center font-bold">Our Story </h2>
+                <h2 className="text-5xl text-center font-bold font-oldlondon">Our Story </h2>
               <p>
                 <br/>
               Welcome to Kissmylashesz, born from our heartfelt journey and fueled
