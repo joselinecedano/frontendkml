@@ -5,7 +5,7 @@ const ServicesIdx = (props) => {
   //loaded function
   const loaded = () => {
     return (
-      <section className="min-h-screen "> 
+      <div className="min-h-screen "> 
       <h1 className="font-oldlondon text-6xl text-center"> Services</h1><br/>
         <div className="flex flex-wrap justify-center border rounded-xl border-x-amber-950">
           <div className="w-full sm:w-1/2 p-2 ">
@@ -72,7 +72,7 @@ to book in for a removal and a fresh set.
         </div>
         <Link to="/services/form">Add a Service</Link>
         
-      </section>
+      </div>
     );
   };
 

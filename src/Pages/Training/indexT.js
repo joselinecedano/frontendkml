@@ -2,29 +2,42 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const TrainingIdx = (props) => {
-
   //loaded function
   const loaded = () => {
     return (
-      <>
-     {props.courses.map((course) => (
-      <div key={course._id} >
-        <Link to={`/training/${course._id}`}>
-          <h1 className="course-title"> {course.name}</h1>
-        </Link>
-        <img src={course.image} alt={course.name} />
-        <h3> {course.description} </h3>
+      <div className="min-h-screen">
+        <h1 className="font-oldlondon text-6xl text-center"> Training Courses </h1><br/>
+       <div className="flex flex-wrap justify-center ">
+        {props.courses.map((course) => (
+          <div
+            key={course._id}
+            className="relative p-2 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col items-center"
+          >
+            <Link to={`/training/${course._id}`}>
+              <img
+                className="object-scale-down rounded-lg hover:scale-90"
+                src={course.image}
+                alt={course.name}
+              />
+            </Link>
+            <h1 className="text-center font-oldlondon text-2xl md:text-4xl">
+              {" "}
+              {course.name}
+            </h1>
+            <h3> {course.description} </h3>
+          </div>
+        ))}
+        <Link to="/training/form">Add a Course</Link>
       </div>
-    ))}
-   <Link to ='/training/form'>Add a Course</Link>
-      </>
+      </div>
+     
     );
   };
 
   const loading = () => {
-    return <h1> Loading Training Courses ... </h1>
-  }
-  return (props.courses ? loaded() : loading());
+    return <h1> Loading Training Courses ... </h1>;
+  };
+  return props.courses ? loaded() : loading();
 };
 
 export default TrainingIdx;
