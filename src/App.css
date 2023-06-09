@@ -8,3 +8,22 @@ height: 300px;
 .logo{
   max-height: 90px;
 }
+
+@keyframes custom-pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.79;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* applying the custom pulse animation */
+.animate-pulse {
+  animation-name: custom-pulse;
+  animation-duration: 2s; 
+  animation-iteration-count: infinite;
+}
