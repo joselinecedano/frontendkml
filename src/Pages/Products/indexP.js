@@ -5,25 +5,37 @@ const ProductsIdx = (props) => {
   //loaded function
   const loaded = () => {
     return (
-      <>
-     {props.products.map((product) => (
-      <div key={product._id} >
-        <Link to={`/products/${product._id}`}>
-          <h1 className="product-title"> {product.name}</h1>
-        </Link>
-        <img src={product.image} alt={product.name} />
-        <h3> {product.description} </h3>
+      <div className="min-h-screen">
+        <h1 className="font-oldlondon text-6xl text-center"> Products </h1>
+        <div className="flex flex-wrap justify-center ">
+          {props.products.map((product) => (
+            <div
+              key={product._id}
+              className="relative p-3 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col items-center"
+            >
+              <Link to={`/products/${product._id}`}>
+                <img
+                  className="object-scale-down rounded-lg hover:scale-90"
+                  src={product.image}
+                  alt={product.name}
+                />
+              </Link>
+              <h1 className="text-center font-oldlondon text-2xl md:text-4xl">
+                {product.name}
+              </h1>
+              <h3 className="text-center"> {product.description} </h3>
+            </div>
+          ))}
+          <Link to="/products/form">Add a product</Link>
+        </div>
       </div>
-    ))}
-   <Link to ='/products/form'>Add a product</Link>
-      </>
     );
   };
 
   const loading = () => {
-    return <h1> Loading Products ... </h1>
-  }
-  return (props.products ? loaded() : loading());
+    return <h1> Loading Products ... </h1>;
+  };
+  return props.products ? loaded() : loading();
 };
 
 export default ProductsIdx;

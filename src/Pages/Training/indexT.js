@@ -21,7 +21,6 @@ const TrainingIdx = (props) => {
               />
             </Link>
             <h1 className="text-center font-oldlondon text-2xl md:text-4xl">
-              {" "}
               {course.name}
             </h1>
             <h3 className="text-center"> {course.description} </h3>
