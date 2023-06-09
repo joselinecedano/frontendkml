@@ -6,12 +6,12 @@ const TrainingIdx = (props) => {
   const loaded = () => {
     return (
       <div className="min-h-screen">
-        <h1 className="font-oldlondon text-6xl text-center"> Training Courses </h1><br/>
+        <h1 className="font-oldlondon text-6xl text-center"> One on One's </h1><br/>
        <div className="flex flex-wrap justify-center ">
         {props.courses.map((course) => (
           <div
             key={course._id}
-            className="relative p-2 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col items-center"
+            className="relative p-3 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col items-center "
           >
             <Link to={`/training/${course._id}`}>
               <img
@@ -24,7 +24,7 @@ const TrainingIdx = (props) => {
               {" "}
               {course.name}
             </h1>
-            <h3> {course.description} </h3>
+            <h3 className="text-center"> {course.description} </h3>
           </div>
         ))}
         <Link to="/training/form">Add a Course</Link>
