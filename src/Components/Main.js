@@ -10,12 +10,14 @@ import KissMyLashesz from "../Pages/Landing.js";
 import AboutUs from "../Pages/AboutUs.js";
 import Admin from "../Pages/Admin.js";
 import Register from "./Register.js";
+import BeforeAndAfter from "../Pages/BeforeAndAfter.js";
 
 
 const Main = (props) => {
   return (
     <main>
       <Routes>
+        
         <Route path="/services/*" element={<Services />} />
         {/* if you navigate deeper, the parent won't match anymore and therefore the child routes will never render without adding '*' */}
 
@@ -32,6 +34,8 @@ const Main = (props) => {
         <Route path="/admin/*" element={<Admin />} />
 
         <Route path="/register" element={<Register/>}/>
+
+        <Route path="/before-after" element={<BeforeAndAfter/>}/>
 
       </Routes>
     </main>

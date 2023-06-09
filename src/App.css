@@ -27,3 +27,8 @@ height: 300px;
   animation-duration: 2s; 
   animation-iteration-count: infinite;
 }
+
+html, body{
+  overflow-x: hidden;
+  /* prevents horizontal scrolling and ensures that the content is contained within the viewport. */
+}

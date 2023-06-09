@@ -15,7 +15,12 @@ const Header = () => {
           <Link to="/">
             <img className="logo" src="/images/cherry.png" alt="cherry" />
           </Link>
-           <a className=" ml-4 italic drop-shadow-glow"  href="https://app.acuityscheduling.com/schedule.php?owner=19702883">Book Now</a>
+          <a
+            className=" ml-4 italic drop-shadow-glow"
+            href="https://app.acuityscheduling.com/schedule.php?owner=19702883"
+          >
+            Book Now
+          </a>
         </div>
         <div>
           <img
@@ -33,6 +38,16 @@ const Header = () => {
           id="menu-button"
         >
           <ul className="pt-4 text-end md:flex md:justify-between md:pt-0">
+            <li>
+              <Link
+                className="md:p-4 py-2 block hover:text-red-400"
+                to="/about"
+                onClick={toggleMenu}
+              >
+                <div> Our Story </div>
+              </Link>
+            </li>
+
             <li>
               <Link
                 className="md:p-4 py-2 block hover:text-red-400"
@@ -72,10 +87,10 @@ const Header = () => {
             <li>
               <Link
                 className="md:p-4 py-2 block hover:text-red-400"
-                to="/about"
+                to="/before-after"
                 onClick={toggleMenu}
               >
-                <div> Our Story </div>
+                <div> Guidlines </div>
               </Link>
             </li>
           </ul>

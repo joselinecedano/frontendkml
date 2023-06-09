@@ -6,36 +6,8 @@ const ServicesIdx = (props) => {
   const loaded = () => {
     return (
       <div className="min-h-screen "> 
-      <h1 className="font-oldlondon text-6xl text-center"> Services</h1><br/>
-        <div className="flex flex-wrap justify-center border rounded-xl border-x-amber-950">
-          <div className="w-full sm:w-1/2 p-2 ">
-            <div className="text-center">
-              <h1 className="font-oldlondon text-xl "> Policies </h1>
-              <p>
-                § Our regulare hours are from 8am - 5pm. Any appointments booked
-                outside of our scheduled hours will be considered a sqeeze in
-                appointment, which comes with a fee of $15.
-                <br />§ We have a 10 minute grace period! Anything after is a{" "}
-                <span className="underline text-red-500">cancellation</span>.
-              </p>
-            </div>
-          </div>
-          <div className="w-full sm:w-1/2 p-2">
-            <div className="text-center">
-              <h1 className="font-oldlondon text-xl"> Deposits </h1>
-              <p>
-                § A non-refundable $25 deposit is required to book appointment.
-                <br />
-                § A $1 electronic fee is included. § $25 deposits are deducted
-                off the final price. <br /> § Deposits can be transferred when
-                rescheduling appointments if a 24hr notice has been given.{" "}
-                <br /> § Appointments are not booked until a deposit and
-                confirmation email has been received.
-              </p>
-            </div>
-          </div>
-        </div><br/>
-       
+      <h1 className="font-oldlondon text-6xl text-center"> Services</h1>
+       <p className="text-red-500 text-center"> * PLEASE READ OUR GUIDLINES BEFORE BOOKING *</p><br/>
         <div className="flex flex-wrap items-center justify-center ">
           {props.services.map((service) => (
             <div
