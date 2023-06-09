@@ -43,6 +43,7 @@ export const ServiceEdit = (props) => {
           placeholder="Service Name"
           onChange={handleChange}
           required
+          className="text-black"
         />
         <br />
         <label> Image URL: </label>
@@ -52,6 +53,7 @@ export const ServiceEdit = (props) => {
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
+          className="text-black"
         />
         <br />
         <label> Description: </label>
@@ -61,6 +63,7 @@ export const ServiceEdit = (props) => {
           name="description"
           placeholder="Service Description"
           onChange={handleChange}
+          className="text-black"
         />
         <br />
         <label> Price: </label>
@@ -71,6 +74,7 @@ export const ServiceEdit = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
+          className="text-black"
         />
         <br />
         <input type="submit" value="Update Service" />

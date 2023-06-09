@@ -44,6 +44,7 @@ const ServiceCrt = (props) => {
           placeholder="Name"
           onChange={handleChange}
           required
+          className="text-black"
         /><br/>
         <label> Image URL: </label>
         <input
@@ -52,6 +53,7 @@ const ServiceCrt = (props) => {
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
+          className="text-black"
         /><br/>
         <label> Description: </label>
         <input
@@ -60,6 +62,7 @@ const ServiceCrt = (props) => {
           name="description"
           placeholder="Description"
           onChange={handleChange}
+          className="text-black"
         /><br/>
         <label> Price: </label>
         <input
@@ -69,6 +72,7 @@ const ServiceCrt = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
+          className="text-black"
         /><br/>
         <input type="submit" value="Add Service" />
       </form>

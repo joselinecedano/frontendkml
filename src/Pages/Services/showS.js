@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
+import FillIns from "../../Components/Fill-ins";
 
 const ServiceShow = (props) => {
   const navigate = useNavigate();
@@ -29,8 +30,11 @@ const ServiceShow = (props) => {
           <h3 className="text-center text-xl italic"> ${service.price}</h3>
           <br />
           <h3 className="text-lg text-center"> {service.description}</h3>
-        </div>
-      </div>
+        </div> 
+      </div> 
+
+       <FillIns/>
+      
       <div>
         <button onClick={edit}> Edit</button>
       </div>
