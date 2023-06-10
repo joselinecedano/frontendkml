@@ -14,7 +14,7 @@ const ProductShow = (props) => {
     navigate(`/products/edit/${product._id}`);
   };
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen text-center">
       <div className="flex flex-col sm:flex-row border rounded-xl border-x-amber-950 p-2">
         <img
           className="object-scale-down h-80 rounded-lg sm:w-1/2 sm:order-first"
@@ -28,6 +28,13 @@ const ProductShow = (props) => {
           </h2>
           <h3 className="text-center text-xl italic"> ${product.price}</h3>
           <h4 className="text-lg text-center"> {product.description}</h4>
+          <div className="p-2">
+            <button className="border rounded-xl border-x-amber-950 p-1.5 mt-auto ">
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=19702883">
+                Buy Now
+              </a>
+            </button>
+          </div>
         </div>
       </div>
       <div>

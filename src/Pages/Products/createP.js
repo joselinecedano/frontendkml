@@ -44,6 +44,7 @@ const ProductsCrt = (props) => {
           placeholder="Name"
           onChange={handleChange}
           required
+          className='text-black'
         /><br/>
         <label> Image URL: </label>
         <input
@@ -52,6 +53,7 @@ const ProductsCrt = (props) => {
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
+          className='text-black'
         /><br/>
         <label> Description: </label>
         <input
@@ -61,6 +63,7 @@ const ProductsCrt = (props) => {
           placeholder="Description"
           onChange={handleChange}
           required
+          className='text-black'
         /><br/>
         <label> Price: </label>
         <input
@@ -70,6 +73,7 @@ const ProductsCrt = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
+          className='text-black'
         /><br/>
         <input type="submit" value="Add Product" />
       </form>

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-     <footer  className='flex justify-center '>
-        <Link  to = 'https://www.facebook.com/kissmylasheszz?mibextid=LQQJ4d'> <div> <img className='h-10'src='/images/facebook.png' alt='facebook'/></div></Link> 
+     <footer  className='flex justify-center p-3'>
+        <Link  to = 'https://www.facebook.com/kissmylasheszz?mibextid=LQQJ4d'> <div> <img className='h-10 'src='/images/facebook.png' alt='facebook'/></div></Link> 
 
         <Link to = 'https://instagram.com/kissmylashesz?igshid=MzRlODBiNWFlZA=='> <div> <img className='h-10 ' src='/images/instagram.png' alt='insta'/> </div></Link>
 

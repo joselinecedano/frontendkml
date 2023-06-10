@@ -23,10 +23,11 @@ const ProductsIdx = (props) => {
               <h1 className="text-center font-oldlondon text-2xl md:text-4xl">
                 {product.name}
               </h1>
-              <h3 className="text-center"> {product.description} </h3>
+              {/* <h3 className="text-center"> {product.description} </h3> */}
+              <button className="border rounded-xl border-x-amber-950 p-1.5 mt-auto"><a href="https://app.acuityscheduling.com/schedule.php?owner=19702883">Buy Now</a></button>
             </div>
           ))}
-          <Link to="/products/form">Add a product</Link>
+          <Link to="/products/form">Add a Product</Link>
         </div>
       </div>
     );
