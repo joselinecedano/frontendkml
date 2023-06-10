@@ -28,7 +28,7 @@ const ServiceShow = (props) => {
             {service.name}
           </h2>
           <h3 className="text-center text-xl italic"> ${service.price}</h3>
-          <br />
+         
           <h3 className="text-lg text-center"> {service.description}</h3>
         </div> 
       </div> 

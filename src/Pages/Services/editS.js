@@ -77,6 +77,26 @@ export const ServiceEdit = (props) => {
           className="text-black"
         />
         <br />
+        <label> Mini Fill: </label>
+        <input
+          type="number"
+          value={editForm.miniFill}
+          name="Mini fill"
+          placeholder="Price"
+          onChange={handleChange}
+          required
+          className="text-black"
+        /><br/>
+        <label> Fill In: </label>
+        <input
+          type="number"
+          value={editForm.fillIn}
+          name="fillIn"
+          placeholder="Price"
+          onChange={handleChange}
+          required
+          className="text-black"
+        /><br/>
         <input type="submit" value="Update Service" />
       </form>
       <button onClick={deleteService}> Delete </button>

@@ -74,6 +74,27 @@ const ServiceCrt = (props) => {
           required
           className="text-black"
         /><br/>
+    
+        <label> Mini Fill: </label>
+        <input
+          type="number"
+          value={serviceForm.miniFill}
+          name="Mini fill"
+          placeholder="Price"
+          onChange={handleChange}
+          required
+          className="text-black"
+        /><br/>
+        <label> Fill In: </label>
+        <input
+          type="number"
+          value={serviceForm.fillIn}
+          name="fillIn"
+          placeholder="Price"
+          onChange={handleChange}
+          required
+          className="text-black"
+        /><br/>
         <input type="submit" value="Add Service" />
       </form>
     </section>
