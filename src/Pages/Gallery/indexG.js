@@ -5,17 +5,17 @@ const GalleryIdx = (props) => {
   //loaded function
   const loaded = () => {
     return (
-      <>
+      <div className="min-h-screen text-center">
      {props.posts.map((post) => (
-      <div key={post._id} >
+      <div key={post._id} className="flex p-2 ">
         <Link to={`/gallery/${post._id}`}>
-        <img src={post.image} alt={post.name} /> </Link>
+        <img className="object-scale-down rounded-lg h-80 w-80" src={post.image} alt={post.name} /> </Link>
          {/* <h2 className="post-title"> {post.name}</h2>
         <h3> {post.description} </h3> */}
       </div>
     ))}
    <Link to ='/gallery/form'>Add a Post</Link>
-      </>
+      </div>
     );
   };
 

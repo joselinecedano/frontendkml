@@ -42,6 +42,7 @@ const GalleryEdit = (props) => {
           name="name"
           placeholder="post Name"
           onChange={handleChange}
+          className="text-black"
         />
         <br />
         <label> Image URL: </label>
@@ -52,6 +53,7 @@ const GalleryEdit = (props) => {
           placeholder="Image URL"
           onChange={handleChange}
           required
+          className="text-black"
         />
         <br />
         <label> Description: </label>
@@ -61,6 +63,7 @@ const GalleryEdit = (props) => {
           name="description"
           placeholder="post Description"
           onChange={handleChange}
+          className="text-black"
         />
         <br />
         <input type="submit" value="Update Post" />

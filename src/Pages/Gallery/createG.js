@@ -41,6 +41,7 @@ const GalleryCrt = (props) => {
           name="name"
           placeholder="Name"
           onChange={handleChange}
+          className="text-black"
         /><br/>
         <label> Image URL: </label>
         <input
@@ -50,6 +51,7 @@ const GalleryCrt = (props) => {
           placeholder="Image URL"
           onChange={handleChange}
           required
+          className="text-black"
         /><br/>
         <label> Description: </label>
         <input
@@ -58,6 +60,7 @@ const GalleryCrt = (props) => {
           name="description"
           placeholder="Description"
           onChange={handleChange}
+          className="text-black"
         /><br/>
         <input type="submit" value="Add Post" />
       </form>
