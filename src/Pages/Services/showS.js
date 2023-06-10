@@ -15,10 +15,10 @@ const ServiceShow = (props) => {
     navigate(`/services/edit/${service._id}`);
   };
   return (
-    <div className=" min-h-screen">
+    <div className=" min-h-screen text-center">
       <div className="flex flex-col sm:flex-row border rounded-xl border-x-amber-950 p-2">
         <img
-          className="object-scale-down h-80 rounded-lg sm:w-1/2 sm:order-first"
+          className="object-scale-down h-80 rounded-xl sm:w-1/2 sm:order-first"
           src={service.image}
           alt={service.name}
         />
@@ -28,13 +28,34 @@ const ServiceShow = (props) => {
             {service.name}
           </h2>
           <h3 className="text-center text-xl italic"> ${service.price}</h3>
-         
           <h3 className="text-lg text-center"> {service.description}</h3>
-        </div> 
-      </div> 
+          <div className="p-2">
+            <button className="border rounded-xl border-x-amber-950 p-1 mt-auto ">
+              <a href="https://app.acuityscheduling.com/schedule.php?owner=19702883">
+                Book Now
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
 
-       <FillIns/>
-      
+      <FillIns />
+      <div className="flex flex-wrap justify-center ">
+        <div className="w-full sm:w-1/2 p-4 ">
+          <div className="text-center border rounded-xl border-x-amber-950">
+            <h1 className="font-oldlondon text-2xl "> Mini Fill : 1 Week  </h1>
+            <h2> $ {service.miniPrice}</h2>
+          </div>
+        </div>
+        <div className="w-full sm:w-1/2 p-4">
+          <div className="text-center border rounded-xl border-x-amber-950">
+            <h1 className="font-oldlondon text-2xl"> Fill In : 2 Weeks </h1>
+            <h2> ${service.fillPrice}</h2>
+            
+          </div>
+        </div>
+      </div>
+      <br />
       <div>
         <button onClick={edit}> Edit</button>
       </div>
