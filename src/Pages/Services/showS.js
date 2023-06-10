@@ -44,14 +44,13 @@ const ServiceShow = (props) => {
         <div className="w-full sm:w-1/2 p-4 ">
           <div className="text-center border rounded-xl border-x-amber-950">
             <h1 className="font-oldlondon text-2xl "> Mini Fill : 1 Week  </h1>
-            <h2> $ {service.miniPrice}</h2>
+            <h2> ${service.miniPrice}</h2>
           </div>
         </div>
         <div className="w-full sm:w-1/2 p-4">
           <div className="text-center border rounded-xl border-x-amber-950">
             <h1 className="font-oldlondon text-2xl"> Fill In : 2 Weeks </h1>
             <h2> ${service.fillPrice}</h2>
-            
           </div>
         </div>
       </div>
@@ -59,7 +58,7 @@ const ServiceShow = (props) => {
       <div>
         <button onClick={edit}> Edit</button>
       </div>
-      <Link to="/services"> Back to Service</Link>
+      <Link to="/services"> Back to Services </Link>
     </div>
   );
 };

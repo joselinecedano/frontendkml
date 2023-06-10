@@ -5,7 +5,7 @@ const ServicesIdx = (props) => {
   //loaded function
   const loaded = () => {
     return (
-      <div className="min-h-screen "> 
+      <div className="min-h-screen text-center"> 
       <h1 className="font-oldlondon text-6xl text-center"> Services</h1>
        <p className="text-red-500 text-center"> * PLEASE READ OUR GUIDLINES BEFORE BOOKING *</p><br/>
         <div className="flex flex-wrap items-center justify-center ">

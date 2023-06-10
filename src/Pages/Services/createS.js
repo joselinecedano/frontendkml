@@ -78,21 +78,19 @@ const ServiceCrt = (props) => {
         <label> Mini Fill: </label>
         <input
           type="number"
-          value={serviceForm.miniFill}
-          name="Mini fill"
+          value={serviceForm.miniPrice}
+          name="miniPrice"
           placeholder="Price"
           onChange={handleChange}
-          required
           className="text-black"
         /><br/>
         <label> Fill In: </label>
         <input
           type="number"
-          value={serviceForm.fillIn}
-          name="fillIn"
+          value={serviceForm.fillPrice}
+          name="fillPrice"
           placeholder="Price"
           onChange={handleChange}
-          required
           className="text-black"
         /><br/>
         <input type="submit" value="Add Service" />

@@ -80,21 +80,19 @@ export const ServiceEdit = (props) => {
         <label> Mini Fill: </label>
         <input
           type="number"
-          value={editForm.miniFill}
-          name="Mini fill"
+          value={editForm.miniPrice}
+          name="miniPrice"
           placeholder="Price"
           onChange={handleChange}
-          required
           className="text-black"
         /><br/>
         <label> Fill In: </label>
         <input
           type="number"
-          value={editForm.fillIn}
-          name="fillIn"
+          value={editForm.fillPrice }
+          name="fillPrice"
           placeholder="Price"
           onChange={handleChange}
-          required
           className="text-black"
         /><br/>
         <input type="submit" value="Update Service" />
