@@ -71,26 +71,6 @@ const ProductsCrt = (props) => {
           onChange={handleChange}
           required
         /><br/>
-                <label> Mini Fill: </label>
-        <input
-          type="number"
-          value={productForm.miniFill}
-          name="Mini fill"
-          placeholder="Mini Fill"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
-        <label> Fill In: </label>
-        <input
-          type="number"
-          value={productForm.fillIn}
-          name="fillIn"
-          placeholder="Fill In"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
         <input type="submit" value="Add Product" />
       </form>
     </section>

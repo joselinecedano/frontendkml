@@ -44,6 +44,7 @@ export const TrainingEdit = (props) => {
           placeholder="Course Name"
           onChange={handleChange}
           required
+          className="text-black"
         />
         <br />
         <label> Image URL: </label>
@@ -53,6 +54,7 @@ export const TrainingEdit = (props) => {
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
+          className="text-black"
         />
         <br />
         <label> Description: </label>
@@ -62,6 +64,7 @@ export const TrainingEdit = (props) => {
           name="description"
           placeholder="Course Description"
           onChange={handleChange}
+          className="text-black"
         />
         <br />
         <label> Price: </label>
@@ -72,28 +75,9 @@ export const TrainingEdit = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
+          className="text-black"
         />
         <br />
-        <label> Mini Fill: </label>
-        <input
-          type="number"
-          value={editForm.miniFill}
-          name="Mini fill"
-          placeholder="Mini Fill"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
-        <label> Fill In: </label>
-        <input
-          type="number"
-          value={editForm.fillIn}
-          name="fillIn"
-          placeholder="Fill In"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
         <input type="submit" value="Update Course" />
       </form>
       <button onClick={deleteCourse}> Delete </button>

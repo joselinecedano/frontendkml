@@ -23,7 +23,7 @@ const TrainingIdx = (props) => {
             <h1 className="text-center font-oldlondon text-2xl md:text-4xl">
               {course.name}
             </h1>
-            <h3 className="text-center"> {course.description} </h3>
+            <button className="border rounded-xl border-x-amber-950 p-1 mt-auto"><a href="https://app.acuityscheduling.com/schedule.php?owner=19702883">Book Now</a></button>
           </div>
         ))}
         <Link to="/training/form">Add a Course</Link>

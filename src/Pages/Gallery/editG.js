@@ -63,26 +63,6 @@ const GalleryEdit = (props) => {
           onChange={handleChange}
         />
         <br />
-        <label> Mini Fill: </label>
-        <input
-          type="number"
-          value={editForm.miniFill}
-          name="Mini fill"
-          placeholder="Mini Fill"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
-        <label> Fill In: </label>
-        <input
-          type="number"
-          value={editForm.fillIn}
-          name="fillIn"
-          placeholder="Fill In"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
         <input type="submit" value="Update Post" />
       </form>
       <button  onClick={deletePost}> Delete </button>

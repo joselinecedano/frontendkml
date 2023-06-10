@@ -59,27 +59,6 @@ const GalleryCrt = (props) => {
           placeholder="Description"
           onChange={handleChange}
         /><br/>
-                <label> Mini Fill: </label>
-        <input
-          type="number"
-          value={postsForm.miniFill}
-          name="Mini fill"
-          placeholder="Mini Fill"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
-        <label> Fill In: </label>
-        <input
-          type="number"
-          value={postsForm.fillIn}
-          name="fillIn"
-          placeholder="Fill In"
-          onChange={handleChange}
-          required
-          className="text-black"
-        /><br/>
-       
         <input type="submit" value="Add Post" />
       </form>
     </section>
