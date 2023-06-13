@@ -33,7 +33,7 @@ const GalleryEdit = (props) => {
 
   return (
     <div className='text-center flex flex-col min-h-screen'>
-       <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+       <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" className="giphy-embed" allowFullScreen title='kisses'></iframe>
       <h2 className='font-oldlondon text-4xl'> Edit {post.name}</h2> 
       <form className='p-2' onSubmit={handleSubmit}>
         <label className='text-xl '> Name : </label>

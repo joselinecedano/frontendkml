@@ -41,7 +41,7 @@ const ProductsIdx = (props) => {
               </button>
             </div>
           ))}
-          <Link to="/products/form">Add a Product</Link>
+          <Link className="text-black" to="/products/form">Add a Product</Link>
         </div>
       </div>
     );

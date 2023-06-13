@@ -42,7 +42,7 @@ const TrainingIdx = (props) => {
               </button>
             </div>
           ))}
-          <Link to="/training/form">Add a Course</Link>
+          <Link className="text-black" to="/training/form">Add a Course</Link>
         </div>
       </div>
     );

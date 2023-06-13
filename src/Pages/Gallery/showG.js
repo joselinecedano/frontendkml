@@ -14,15 +14,15 @@ const GalleryShow = (props) => {
     navigate(`/gallery/edit/${post._id}`);
   };
   return (
-    <div data-aos="fade-down-right" className="min-h-screen text-center">
-      <img className="rounded-xl p-2" src={post.image} alt={post.name} />
+    <div data-aos="fade-down-right" className="min-h-screen text-center flex flex-col items-center">
+      <img className="rounded-2xl p-2 h-80 w-80" src={post.image} alt={post.name} />
       <div className="border rounded-xl border-x-amber-950 p-2">
         <h2> {post.name}</h2>
         <h3> "{post.description}"</h3>
       </div>
 
       <div>
-        <button onClick={edit}> Edit </button>
+        <button className='p-2' onClick={edit}> Edit </button>
       </div>
       <Link to="/gallery"> Back to Gallery </Link>
     </div>

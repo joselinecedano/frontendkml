@@ -33,7 +33,7 @@ export const ServiceEdit = (props) => {
 
   return (
     <div className='text-center flex flex-col min-h-screen'>
-       <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+       <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" className="giphy-embed" allowFullScreen title='kisses'></iframe>
       <h2 className='font-oldlondon text-4xl'> Edit {service.name}</h2>
       <form onSubmit={handleSubmit} className='p-2'>
         <label className='text-xl '> Name : </label>
