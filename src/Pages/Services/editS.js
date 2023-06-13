@@ -32,10 +32,11 @@ export const ServiceEdit = (props) => {
   };
 
   return (
-    <div >
-      <h2> Edit {service.name}</h2>
-      <form onSubmit={handleSubmit}>
-        <label> Name: </label>
+    <div className='text-center flex flex-col min-h-screen'>
+       <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+      <h2 className='font-oldlondon text-4xl'> Edit {service.name}</h2>
+      <form onSubmit={handleSubmit} className='p-2'>
+        <label className='text-xl '> Name : </label>
         <input
           type="text"
           value={editForm.name}
@@ -43,30 +44,30 @@ export const ServiceEdit = (props) => {
           placeholder="Service Name"
           onChange={handleChange}
           required
-          className="text-black"
+          className="text-black mt-2 p-1"
         />
         <br />
-        <label> Image URL: </label>
+        <label className='text-xl '> Img URL : </label>
         <input
           type="text"
           value={editForm.image}
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
-          className="text-black"
+          className="text-black mt-2 p-1"
         />
         <br />
-        <label> Description: </label>
+        <label className='text-xl '> Description: </label>
         <input
           type="text"
           value={editForm.description}
           name="description"
           placeholder="Service Description"
           onChange={handleChange}
-          className="text-black"
+          className="text-black mt-2 p-1"
         />
         <br />
-        <label> Price: </label>
+        <label className='text-xl '> Price : </label>
         <input
           type="number"
           value={editForm.price}
@@ -74,30 +75,30 @@ export const ServiceEdit = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
-          className="text-black"
+          className="text-black mt-2 p-1"
         />
         <br />
-        <label> Mini Fill: </label>
+        <label className='text-xl '> Mini Fill : </label>
         <input
           type="number"
           value={editForm.miniPrice}
           name="miniPrice"
           placeholder="Price"
           onChange={handleChange}
-          className="text-black"
+          className="text-black mt-2 p-1"
         /><br/>
-        <label> Fill In: </label>
+        <label className='text-xl '> Fill In : </label>
         <input
           type="number"
           value={editForm.fillPrice }
           name="fillPrice"
           placeholder="Price"
           onChange={handleChange}
-          className="text-black"
+          className="text-black mt-2 p-1"
         /><br/>
-        <input type="submit" value="Update Service" />
+        <input type="submit" value="Update Service" className="p-2 hover:text-red-300"/>
       </form>
-      <button onClick={deleteService}> Delete </button>
+      <button onClick={deleteService} className="hover:text-red-500"> Delete </button>
     </div>
   );
 };
