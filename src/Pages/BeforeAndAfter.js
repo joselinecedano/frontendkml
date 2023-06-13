@@ -1,12 +1,20 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+
+//import AOS animation
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BeforeAndAfter = () => {
+    //initialize AOS animation
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen' >
         <h1 className='font-oldlondon text-6xl text-center'> Guidelines </h1> <br/>
-        <div className="flex flex-wrap justify-center ">
-          <div className="w-full sm:w-1/2 p-4 ">
-            <div className="text-center border rounded-xl border-x-amber-950">
+        <div className="flex flex-wrap justify-center " >
+          <div className="w-full sm:w-1/2 p-4" data-aos="fade-down-right">
+            <div className="text-center border rounded-xl border-x-amber-950 p-2 h-">
               <h1 className="font-oldlondon text-2xl "> Policies </h1>
               <p>
                 § Our regular hours are from 8am - 5pm. Any appointments booked
@@ -17,8 +25,8 @@ const BeforeAndAfter = () => {
               </p>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 p-4">
-            <div className="text-center border rounded-xl border-x-amber-950">
+          <div className="w-full sm:w-1/2 p-4" >
+            <div className="text-center border rounded-xl border-x-amber-950 p-2" data-aos="fade-down-left">
               <h1 className="font-oldlondon text-2xl"> Deposits </h1>
               <p>
                 § A non-refundable $25 deposit is required to book appointment.
@@ -33,7 +41,7 @@ const BeforeAndAfter = () => {
           </div>
         </div><br/>
         
-        <div className="border rounded-xl border-x-amber-950">
+        <div className="border rounded-xl border-x-amber-950" data-aos="fade-down-right">
           <div className="vw-full sm:w-full p-4">
             <h1 className="font-oldlondon text-center text-2xl">
               Before Appointment
@@ -64,7 +72,7 @@ const BeforeAndAfter = () => {
           </div>
         </div>
 <br/>
-        <div className="border rounded-xl border-x-amber-950">
+        <div className="border rounded-xl border-x-amber-950" data-aos="fade-down-left">
           <div className="vw-full sm:w-full p-4">
             <h1 className="font-oldlondon text-center text-2xl">
               After Appointment

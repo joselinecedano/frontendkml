@@ -35,7 +35,7 @@ const Main = (props) => {
 
         <Route path="/register" element={<Register/>}/>
 
-        <Route path="/before-after" element={<BeforeAndAfter/>}/>
+        <Route path="/guidelines" element={<BeforeAndAfter/>}/>
 
       </Routes>
     </main>

@@ -15,13 +15,13 @@ const TrainingShow = (props) => {
   };
   return (
     <div className=" min-h-screen text-center">
-      <div className="flex flex-col sm:flex-row border rounded-xl border-x-amber-950 p-2" data-aos="fade-down-right">
+      <div className="flex flex-col sm:flex-row p-2" data-aos="fade-down-right">
         <img
-          className="object-scale-down h-80 rounded-lg sm:w-1/2 sm:order-first"
+          className="object-cover h-80 rounded-2xl sm:w-1/2 sm:order-first p-2"
           src={course.image}
           alt={course.name}
         />
-        <div className="ml-4">
+        <div className="ml-4 border rounded-xl border-x-amber-950 p-2">
           <h2 className="font-oldlondon text-4xl text-center mt-4">
             {course.name}
           </h2>

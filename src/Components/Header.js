@@ -87,10 +87,10 @@ const Header = () => {
             <li>
               <Link
                 className="md:p-4 py-2 block hover:text-red-400"
-                to="/before-after"
+                to="/guidelines"
                 onClick={toggleMenu}
               >
-                <div> Guidlines </div>
+                <div> Guidelines </div>
               </Link>
             </li>
           </ul>
