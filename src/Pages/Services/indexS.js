@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+//import AOS animation
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const ServicesIdx = (props) => {
+  //initialize AOS animation
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   //loaded function
   const loaded = () => {
     return (
-      <div className="min-h-screen text-center"> 
-      <h1 className="font-oldlondon text-6xl text-center"> Services</h1>
-       <p className="text-red-500 text-center"> * PLEASE READ OUR GUIDLINES BEFORE BOOKING *</p><br/>
-        <div className="flex flex-wrap items-center justify-center ">
+      <div className="min-h-screen text-center">
+        <h1 className="font-oldlondon text-6xl text-center"> Services</h1>
+        <p className="text-red-500 text-center">
+          {" "}
+          * PLEASE READ OUR GUIDLINES BEFORE BOOKING *
+        </p>
+        <br />
+        <div className="flex flex-wrap items-center justify-center">
           {props.services.map((service) => (
             <div
               key={service._id}
+              data-aos="fade-down"
               className="relative p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center"
             >
               <Link to={`/services/${service._id}`}>
                 <img
-                  className="object-scale-down rounded-lg hover:scale-90"
+                  className="object-scale-down  rounded-lg hover:scale-90"
                   src={service.image}
                   alt={service.name}
                 />
@@ -25,13 +39,18 @@ const ServicesIdx = (props) => {
                 {" "}
                 {service.name}
               </h1>
-              <button className="border rounded-xl border-x-amber-950 p-1 mt-auto"><a href="https://app.acuityscheduling.com/schedule.php?owner=19702883">Book Now</a></button>
+              <button className="border rounded-xl border-x-amber-950 p-1 mt-auto">
+                <a href="https://app.acuityscheduling.com/schedule.php?owner=19702883">
+                  Book Now
+                </a>
+              </button>
             </div>
           ))}
         </div>
-        <br/>
-        <Link  className=''to="/services/form">Add a Service</Link>
-        
+        <br />
+        <Link className="" to="/services/form">
+          Add a Service
+        </Link>
       </div>
     );
   };
