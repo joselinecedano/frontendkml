@@ -32,10 +32,11 @@ const ProductEdit = (props) => {
   };
 
   return (
-    <div >
-      <h2> Edit {product.name}</h2>
-      <form onSubmit={handleSubmit}>
-        <label> Name: </label>
+    <div className='text-center flex flex-col min-h-screen'>
+      <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+      <h2 className='font-oldlondon text-4xl'> Edit {product.name}</h2>
+      <form onSubmit={handleSubmit} className='p-2'>
+        <label className='text-xl '> Name : </label>
         <input
           type="text"
           value={editForm.name}
@@ -43,30 +44,30 @@ const ProductEdit = (props) => {
           placeholder="Product Name"
           onChange={handleChange}
           required
-          className='text-black'
+          className="text-black mt-2 p-1"
         />
         <br />
-        <label> Image URL: </label>
+        <label className='text-xl '> Img URL : </label>
         <input
           type="text"
           value={editForm.image}
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
-          className='text-black'
+          className="text-black mt-2 p-1"
         />
         <br />
-        <label> Description: </label>
+        <label className='text-xl '> Description : </label>
         <input
           type="text"
           value={editForm.description}
           name="description"
           placeholder="product Description"
           onChange={handleChange}
-          className='text-black'
+          className="text-black mt-2 p-1"
         />
         <br />
-        <label> Price: </label>
+        <label className='text-xl '> Price : </label>
         <input
           type="number"
           value={editForm.price}
@@ -74,12 +75,12 @@ const ProductEdit = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
-          className='text-black'
+          className="text-black mt-2 p-1"
         />
         <br />
-        <input type="submit" value="Update Product" />
+        <input type="submit" value="Update Product" className="p-2 hover:text-red-300"/>
       </form>
-      <button  onClick={deleteProduct}> Delete </button>
+      <button className="hover:text-red-500" onClick={deleteProduct}> Delete </button>
     </div>
   );
 };
