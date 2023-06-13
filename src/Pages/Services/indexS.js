@@ -30,7 +30,7 @@ const ServicesIdx = (props) => {
           ))}
         </div>
         <br/>
-        <Link to="/services/form">Add a Service</Link>
+        <Link  className=''to="/services/form">Add a Service</Link>
         
       </div>
     );
