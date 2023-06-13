@@ -16,7 +16,7 @@ const ServiceShow = (props) => {
   };
   return (
     <div className=" min-h-screen text-center">
-      <div className="flex flex-col sm:flex-row border rounded-xl border-x-amber-950 p-2">
+      <div className="flex flex-col sm:flex-row border rounded-xl border-x-amber-950 p-2" data-aos="fade-down-right">
         <img
           className="object-scale-down h-80 rounded-xl sm:w-1/2 sm:order-first"
           src={service.image}
@@ -40,7 +40,7 @@ const ServiceShow = (props) => {
       </div>
 
       <FillIns />
-      <div className="flex flex-wrap justify-center ">
+      <div className="flex flex-wrap justify-center " data-aos="fade-down-right">
         <div className="w-full sm:w-1/2 p-4 ">
           <div className="text-center border rounded-xl border-x-amber-950">
             <h1 className="font-oldlondon text-2xl "> Mini Fill : 1 Week  </h1>

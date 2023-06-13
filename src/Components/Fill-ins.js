@@ -3,7 +3,7 @@ import React from 'react'
 const FillIns = () => {
   return (
     <div>
-    <div className="border rounded-xl border-x-amber-950 mt-3 mb-3">
+    <div className="border rounded-xl border-x-amber-950 mt-3 mb-3" data-aos="fade-down-left">
         <div className="w-full sm:w-full p-2 ">
             <div className="text-center">
               <h1 className="font-oldlondon text-xl"> Fill Ins </h1>

@@ -21,7 +21,7 @@ const ProductsIdx = (props) => {
             <div
               key={product._id}
               className="relative p-3 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col items-center"
-              data-aos="fade-down"
+              data-aos="zoom-out-up"
             >
               <Link to={`/products/${product._id}`}>
                 <img

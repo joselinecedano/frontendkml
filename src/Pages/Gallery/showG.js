@@ -14,7 +14,7 @@ const GalleryShow = (props) => {
     navigate(`/gallery/edit/${post._id}`)
   }
   return (
-    <div>
+    <div data-aos="fade-down-right">
       <img src={post.image} alt={post.name} />
       <h2> {post.name}</h2>
       <h3> {post.description}</h3>

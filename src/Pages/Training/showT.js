@@ -15,7 +15,7 @@ const TrainingShow = (props) => {
   };
   return (
     <div className=" min-h-screen text-center">
-      <div className="flex flex-col sm:flex-row border rounded-xl border-x-amber-950 p-2">
+      <div className="flex flex-col sm:flex-row border rounded-xl border-x-amber-950 p-2" data-aos="fade-down-right">
         <img
           className="object-scale-down h-80 rounded-lg sm:w-1/2 sm:order-first"
           src={course.image}

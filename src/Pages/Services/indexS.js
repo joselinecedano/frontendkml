@@ -25,7 +25,7 @@ const ServicesIdx = (props) => {
           {props.services.map((service) => (
             <div
               key={service._id}
-              data-aos="fade-down"
+              data-aos="zoom-out-up"
               className="relative p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center"
             >
               <Link to={`/services/${service._id}`}>
