@@ -31,19 +31,20 @@ const GalleryCrt = (props) => {
   };
 
   return (
-    <section >
-      <h2> Add a Post </h2>
-      <form onSubmit={handleSubmit}>
-        <label> Name: </label>
+    <div className='text-center flex flex-col min-h-screen'>
+      <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+      <h2 className='font-oldlondon text-4xl'> Add a Post </h2>
+      <form className='p-2' onSubmit={handleSubmit}>
+        <label className='text-xl '> Name : </label>
         <input
           type="text"
           value={postsForm.name}
           name="name"
           placeholder="Name"
           onChange={handleChange}
-          className="text-black"
+          className="text-black mt-2 p-1"
         /><br/>
-        <label> Image URL: </label>
+        <label className='text-xl '> Img URL : </label>
         <input
           type="text"
           value={postsForm.image}
@@ -51,20 +52,20 @@ const GalleryCrt = (props) => {
           placeholder="Image URL"
           onChange={handleChange}
           required
-          className="text-black"
+          className="text-black mt-2 p-1"
         /><br/>
-        <label> Description: </label>
+        <label className='text-xl '> Description : </label>
         <input
           type="text"
           value={postsForm.description}
           name="description"
           placeholder="Description"
           onChange={handleChange}
-          className="text-black"
+          className="text-black mt-2 p-1"
         /><br/>
-        <input type="submit" value="Add Post" />
+        <input type="submit" value="Add Post" className="p-2 hover:text-red-300"/>
       </form>
-    </section>
+    </div>
   );
 };
 

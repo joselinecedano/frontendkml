@@ -32,20 +32,20 @@ const GalleryEdit = (props) => {
   };
 
   return (
-    <div >
-      <h2> Edit {post.name}</h2>
-      <form onSubmit={handleSubmit}>
-        <label> Name: </label>
+    <div className='text-center flex flex-col min-h-screen'>
+       <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+      <h2 className='font-oldlondon text-4xl'> Edit {post.name}</h2> 
+      <form className='p-2' onSubmit={handleSubmit}>
+        <label className='text-xl '> Name : </label>
         <input
           type="text"
           value={editForm.name}
           name="name"
           placeholder="post Name"
           onChange={handleChange}
-          className="text-black"
-        />
+          className="text-black mt-2 p-1"        />
         <br />
-        <label> Image URL: </label>
+        <label className='text-xl '> Img URL : </label>
         <input
           type="text"
           value={editForm.image}
@@ -53,22 +53,20 @@ const GalleryEdit = (props) => {
           placeholder="Image URL"
           onChange={handleChange}
           required
-          className="text-black"
-        />
+          className="text-black mt-2 p-1"        />
         <br />
-        <label> Description: </label>
-        <input
+        <label className='text-xl '> Description : </label>
+        <input 
           type="text"
           value={editForm.description}
           name="description"
           placeholder="post Description"
           onChange={handleChange}
-          className="text-black"
-        />
+          className="text-black mt-2 p-1"        />
         <br />
-        <input type="submit" value="Update Post" />
+        <input type="submit" value="Update Post" className="p-2 hover:text-red-300"/>
       </form>
-      <button  onClick={deletePost}> Delete </button>
+      <button className="hover:text-red-500" onClick={deletePost}> Delete </button>
     </div>
   );
 };
