@@ -38,10 +38,11 @@ const Login = (props) => {
         })
     }
   return (
-    <div>
-    <h2> Welcome <br/>Please Sign In </h2>
-    <form >
-        <label> Email: </label>
+    <div className='text-center flex flex-col min-h-screen'>
+        <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+    <h2 className='font-oldlondon text-4xl'> Welcome</h2>
+    <form className='p-2'>
+        <label className='text-xl'> Email : </label>
         <input
         id='email'
         type='email'
@@ -49,9 +50,10 @@ const Login = (props) => {
         onChange={(e)=> setEmail(e.target.value)}
         placeholder='Email Address'
         required
+        className='mt-2 p-1 text-black'
         />
         <br/>
-        <label> Password: </label>
+        <label className='text-xl'> Password : </label>
         <input
         id='password'
         type='password'
@@ -60,12 +62,14 @@ const Login = (props) => {
         onChange={(e)=> setPassword(e.target.value)}
         placeholder='Password'
         required
+        className='mt-2 p-1 text-black'
         />
         <br/>
         <input
         type='submit'
         placeholder='Sign In'
         onClick={onLogin}
+        className='p-2 '
         />
     </form>
     <h4>
