@@ -33,10 +33,11 @@ const TrainingCrt = (props) => {
   };
 
   return (
-    <section >
-      <h2> Add a Course </h2>
-      <form onSubmit={handleSubmit}>
-        <label> Name: </label>
+    <div className='text-center flex flex-col min-h-screen'>
+      <iframe src="https://giphy.com/embed/l3q2Cr0avABaM4eoo" class="giphy-embed" allowFullScreen title='kisses'></iframe>
+      <h2 className='font-oldlondon text-4xl'> Add a Course </h2>
+      <form onSubmit={handleSubmit} className='p-2'>
+        <label className='text-xl'> Name : </label>
         <input
           type="text"
           value={courseForm.name}
@@ -44,16 +45,18 @@ const TrainingCrt = (props) => {
           placeholder="Name"
           onChange={handleChange}
           required
+          className="text-black mt-2 p-1 "
         /><br/>
-        <label> Image URL: </label>
+        <label className='text-xl'> Img URL : </label>
         <input
           type="text"
           value={courseForm.image}
           name="image"
           placeholder="Image URL"
           onChange={handleChange}
+          className="text-black mt-2 p-1 "
         /><br/>
-        <label> Description: </label>
+        <label className='text-xl'> Description : </label>
         <input
           type="text"
           value={courseForm.description}
@@ -61,8 +64,9 @@ const TrainingCrt = (props) => {
           placeholder="Description"
           onChange={handleChange}
           required
+          className="text-black mt-2 p-1 "
         /><br/>
-        <label> Price: </label>
+        <label className='text-xl'> Price : </label>
         <input
           type="number"
           value={courseForm.price}
@@ -70,11 +74,12 @@ const TrainingCrt = (props) => {
           placeholder="Price"
           onChange={handleChange}
           required
+          className="text-black mt-2 p-1 "
         /><br/>
             
-        <input type="submit" value="Add Course" />
+        <input className="p-2 hover:text-red-300" type="submit" value="Add Course" />
       </form>
-    </section>
+    </div>
   );
 };
 

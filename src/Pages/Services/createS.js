@@ -94,7 +94,7 @@ const ServiceCrt = (props) => {
           onChange={handleChange}
           className="text-black mt-2 p-1 "
         /><br/>
-        <input type="submit" value="Add Service" className="p-2 hover:text-red-500"/>
+        <input type="submit" value="Add Service" className="p-2 hover:text-red-300"/>
       </form>
     </div>
   );
