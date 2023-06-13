@@ -36,10 +36,13 @@ const TrainingShow = (props) => {
           </div>
         </div>
       </div>
-      <div>
+      <br/>
+      <Link to="/training"> Back to Training Courses</Link>
+      <br/>
+      <br/>
+      <div className="text-black">
         <button onClick={edit}> Edit</button>
       </div>
-      <Link to="/training"> Back to Training Courses</Link>
     </div>
   );
 };

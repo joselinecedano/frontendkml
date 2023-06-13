@@ -20,11 +20,13 @@ const GalleryShow = (props) => {
         <h2> {post.name}</h2>
         <h3> "{post.description}"</h3>
       </div>
-
-      <div>
+    <br/>
+      <Link to="/gallery"> Back to Gallery </Link> 
+      <br/>
+      <br/>
+      <div className="text-black">
         <button className='p-2' onClick={edit}> Edit </button>
       </div>
-      <Link to="/gallery"> Back to Gallery </Link>
     </div>
   );
 };

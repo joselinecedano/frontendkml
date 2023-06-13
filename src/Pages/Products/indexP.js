@@ -14,7 +14,7 @@ const ProductsIdx = (props) => {
   //loaded function
   const loaded = () => {
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen text-center">
         <h1 className="font-oldlondon text-6xl text-center"> Products </h1>
         <div className="flex flex-wrap justify-center ">
           {props.products.map((product) => (
@@ -41,8 +41,11 @@ const ProductsIdx = (props) => {
               </button>
             </div>
           ))}
-          <Link className="text-black" to="/products/form">Add a Product</Link>
         </div>
+        <br/>
+        <Link className="text-black" to="/products/form">Add a Product</Link>
+        <br/>
+        <br/>
       </div>
     );
   };

@@ -37,10 +37,13 @@ const ProductShow = (props) => {
           </div>
         </div>
       </div>
-      <div>
+     <br/>
+      <Link to="/products"> Back to Products</Link> 
+      <br/>
+      <br/>
+      <div className="text-black">
         <button onClick={edit}> Edit </button>
       </div>
-      <Link to="/products"> Back to Products</Link>
     </div>
   );
 };

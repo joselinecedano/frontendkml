@@ -55,10 +55,12 @@ const ServiceShow = (props) => {
         </div>
       </div>
       <br />
-      <div>
+      <Link to="/services"> Back to Services </Link>
+      <br/>
+      <br/>
+      <div className="text-black">
         <button onClick={edit}> Edit</button>
       </div>
-      <Link to="/services"> Back to Services </Link>
     </div>
   );
 };
