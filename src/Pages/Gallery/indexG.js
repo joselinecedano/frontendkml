@@ -20,7 +20,7 @@ const GalleryIdx = (props) => {
           <div key={post._id}  className="relative p-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center" data-aos="zoom-out-up">
             <Link to={`/gallery/${post._id}`}>
               <img
-                className="object-scale-down rounded-2xl h-80 w-80"
+                className="object-fit rounded-2xl h-80 w-80"
                 src={post.image}
                 alt={post.name}
               />{" "}
@@ -28,7 +28,10 @@ const GalleryIdx = (props) => {
           </div>
         ))}
       </div>
+      <br/>
+      <br/>
       <Link className="text-black" to="/gallery/form">Add a Post</Link>
+      <br/>
       </div>
       
     );

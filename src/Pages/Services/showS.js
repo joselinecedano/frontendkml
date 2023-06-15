@@ -18,7 +18,7 @@ const ServiceShow = (props) => {
     <div className=" min-h-screen text-center">
       <div className="flex flex-col sm:flex-row p-2" data-aos="fade-down-right">
         <img
-          className="object-cover h-80 rounded-2xl sm:w-1/2 sm:order-first p-2"
+          className="object-fill h-80 rounded-2xl sm:w-1/2 sm:order-first p-2"
           src={service.image}
           alt={service.name}
         />
