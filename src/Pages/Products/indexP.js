@@ -25,7 +25,7 @@ const ProductsIdx = (props) => {
             >
               <Link to={`/products/${product._id}`}>
                 <img
-                  className="object-scale-down rounded-lg hover:scale-90"
+                  className="object-scale-down  rounded-lg hover:scale-90"
                   src={product.image}
                   alt={product.name}
                 />
