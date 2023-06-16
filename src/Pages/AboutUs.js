@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+//import AOS animation
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutUs = () => {
+  //initialize AOS animation
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className="py-16 ">
-      <div className="container m-auto px-4 items-center">
+    <section className="py-16 " data-aos="fade-down-right">
+      <div className="container m-auto px-4 items-center" >
         <div>
           <img
             className="rounded-2xl mb-4 mx-auto custom-height "
@@ -16,7 +24,7 @@ const AboutUs = () => {
             <h2 className="text-5xl text-center font-bold font-oldlondon">
               Our Story{" "}
             </h2>
-            <p>
+            <p> 
               <br />
               Welcome to Kissmylashesz, born from our heartfelt journey and
               fueled by our unwavering dedication. As two sisters, we have
