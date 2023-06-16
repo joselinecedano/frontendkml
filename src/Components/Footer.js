@@ -11,9 +11,9 @@ const Footer = () => {
 
         <Link to = 'https://www.tiktok.com/@kissmylashesz?_t=8chb7xPO69u&_r=1'> <div> <img className='h-10' src='/images/tiktok.png' alt='tiktok'/> </div></Link>
     </footer>
-    <div className='text-center'> 
+    {/* <div className='text-center'> 
     <Link  to='/admin'> @kissmylashesz </Link>
-    </div>
+    </div> */}
     </>
    
   )
