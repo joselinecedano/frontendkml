@@ -22,7 +22,7 @@ const AboutUs = () => {
         <div>
           <div className="text-lg text-center">
             <h2 className="text-5xl text-center font-bold font-oldlondon">
-              Our Story{" "}
+              Our Story {" "}
             </h2>
             <p> 
               <br />
