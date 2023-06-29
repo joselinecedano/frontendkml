@@ -24,6 +24,7 @@ I built this app for KISSMYLASHESZ to provide a seamless and convenient online e
 ## Wireframes:
 ![Capstone wireframes](https://github.com/joselinecedano/frontendkml/assets/118120312/1fc8f89a-8a75-49dc-847a-08fbddf11c9b)
 <br></br>
+## Screen Shots:
 ![Screenshot 2023-06-15 at 7 12 05 PM](https://github.com/joselinecedano/frontendkml/assets/118120312/cd53fadb-6b4b-431b-b301-2936471fd5fb)
 ![Screenshot 2023-06-15 at 7 12 20 PM](https://github.com/joselinecedano/frontendkml/assets/118120312/5ece2320-8125-43cd-8cf9-67d25dc297bd)
 ![Screenshot 2023-06-15 at 7 11 53 PM](https://github.com/joselinecedano/frontendkml/assets/118120312/4612882a-7ab4-4f4f-887d-d0dddfdde2d7)
